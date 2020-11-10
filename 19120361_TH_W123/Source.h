@@ -1,4 +1,5 @@
 #pragma once
+#include "string"
 
 void inputArray(int*& a, int& n);
 
@@ -42,4 +43,11 @@ int factorial(int n);
 
 int FIB(int n);
 
-void readCSV();
+
+struct Examinee
+{
+	//string id;
+	float math, literature, physic, chemistry, biology, history, geography, civic_education, natural_science, social_science, foreign_language;
+};
+
+void readCSV(Examinee& sv);

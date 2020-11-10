@@ -1,5 +1,5 @@
 ﻿  Source.cpp
 C:\Users\Admin\source\repos\19120361_TH_W123\19120361_TH_W123\Source.cpp(185,25): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\Admin\source\repos\19120361_TH_W123\19120361_TH_W123\Source.cpp(281,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\Admin\source\repos\19120361_TH_W123\19120361_TH_W123\Source.cpp(288,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
 C:\Users\Admin\source\repos\19120361_TH_W123\19120361_TH_W123\Source.cpp(195): warning C4715: 'gcd': not all control paths return a value
   19120361_TH_W123.vcxproj -> C:\Users\Admin\source\repos\19120361_TH_W123\Debug\19120361_TH_W123.exe

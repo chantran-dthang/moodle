@@ -217,19 +217,19 @@ int FIB(int n)
 	else return FIB(n - 1) + FIB(n - 2);
 }
 
-struct Examinee
-{
-	string id;
-	float math, literature, physic, chemistry, biology, history, geography, civic_education, natural_science, social_science, foreign_language;
-};
+//struct Examinee
+//{
+//	string id;
+//	float math, literature, physic, chemistry, biology, history, geography, civic_education, natural_science, social_science, foreign_language;
+//};
 
-void readCSV()
+void readCSV(Examinee& sv)
 {
 	fstream fs;
 	fs.open("data.txt", ios::in);
 	vector<string> row;
 	string temp, line, word;
-	int roll , j = 0;
+	int roll, j = 0, i = 0;
 	cout << "Enter number of row to see details: ";
 	cin >> roll;
 	getline(fs, temp);
@@ -245,11 +245,18 @@ void readCSV()
 		j++;
 		if (roll == j)
 		{
-			for (int i = 0; i < 15; i++)
-			{
-				cout << row[i] << endl;
-			}
-			break;
+			//sv.id = row[0];
+			sv.math = stof(row[1]);
+			sv.literature = stof(row[2]);
+			sv.physic = stof(row[3]);
+			sv.chemistry = stof(row[4]);
+			sv.biology = stof(row[5]);
+			sv.history = stof(row[6]);
+			sv.geography = stof(row[7]);
+			sv.civic_education = stof(row[8]);
+			sv.natural_science = stof(row[9]);
+			sv.social_science = stof(row[10]);
+			sv.foreign_language = stof(row[11]);
 		}
 		if (roll < 1) cout << "roll not found" << endl;
 	}
@@ -279,5 +286,7 @@ void countWord(string str)
 }
 void main()
 {
-	readCSV();
+	Examinee sv = {};
+	readCSV(sv);
+	cout << sv.math;
 }
